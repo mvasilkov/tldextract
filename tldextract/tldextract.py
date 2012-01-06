@@ -183,6 +183,12 @@ def _fetch_page(url):
 def _PublicSuffixListSource():
     page = _fetch_page('http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1')
 
+    try:
+        our_root = os.path.realpath(os.path.dirname(__file__))
+        page += unicode('\n\n' + open(our_root + '/../multisite_names.txt').read(), 'utf-8')
+    except:
+        pass
+
     tld_finder = re.compile(r'^(?P<tld>[.*!]*\w[\S]*)', re.UNICODE | re.MULTILINE)
     tlds = [m.group('tld') for m in tld_finder.finditer(page)]
     return tlds
