@@ -1,3 +1,17 @@
+# .ua
+com.ua
+net.ua
+org.ua
+edu.ua
+gov.ua
+in.ua
+co.ua
+biz.ua
+pp.ua
+
+# dyndns (misplaced)
+ath.cx
+
 # dyndns
 dyndns-at-home.com
 dyndns-at-work.com
