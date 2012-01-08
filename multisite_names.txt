@@ -9,6 +9,9 @@ co.ua
 biz.ua
 pp.ua
 
+# .co.cc
+co.cc
+
 # dyndns (misplaced)
 ath.cx
 
